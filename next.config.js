@@ -1,14 +1,21 @@
 const path = require('path')
 const glob = require('glob')
+const withSASS = require('@zeit/next-sass')
 
-module.exports = {
+module.exports = withSASS({
+  cssModules: true,
+  cssLoaderOptions: {
+    importLoaders: 1,
+    localIdentName: "[local]___[hash:base64:5]",
+  },
   distDir: 'public',
 
-  // exportPathMap: function () {
-  //   return {
-  //     "/": { page: "/" }
-  //   }
-  // }, Uncomment for static mode
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+      "/about": { page: "/about" },
+    }
+  }, 
 
   webpack: (config, { dev }) => {
     config.module.rules.push(
@@ -27,7 +34,7 @@ module.exports = {
     ,
       {
         test: /\.s(a|c)ss$/,
-        use: ['babel-loader', 'raw-loader', 'postcss-loader',
+        use: ['babel-loader', 'raw-loader', 'postcss-loader', 
           { loader: 'sass-loader',
             options: {
               includePaths: ['styles', 'node_modules']
@@ -41,4 +48,4 @@ module.exports = {
     )
     return config
   }
-}
+})

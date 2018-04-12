@@ -1,42 +1,39 @@
 import React, {Component} from        'react'
 import Head from                      'next/head'
-import {Helmet} from                  'react-helmet'
 import ReactGA from                   'react-ga'
 
-import stylesheet from 'styles/index.sass'
+//import stylesheet from '../styles/main.sass'
 
 const page = {
   index: {
-    title: 'Index - New Project',
-    description: 'This is a great new Project',
-    url: 'https://google.com',
-    keywords: 'test',
-    facebookShare: 'static/images/meta/facebook_share.png',
-    twitterShare: 'static/images/meta/twitter_share.png',
-    favicon: 'static/images/meta/favicon.png'
-  },
-  about: {
-    title: 'About - New Project',
-    description: 'This is a great new Project',
-    url: 'https://google.com',
-    keywords: 'test',
-    facebookShare: 'static/images/meta/facebook_share.png',
-    twitterShare: 'static/images/meta/twitter_share.png',
-    favicon: 'static/images/meta/favicon.png'
+    description: 'Description',
+    url: 'https://ross.so',
+    keywords: 'Keywords',
+    facebookShare: '/static/images/meta/share.png',
+    twitterShare: '/static/images/meta/share.png',
+    favicon: {
+      png: '/static/images/meta/favicons/favicon.png',
+      ico: '/static/images/meta/favicons/favicon.ico',
+      iphone: '/static/images/meta/favicons/touch-icon-iphone.png',
+      svg: '/static/images/meta/favicons/mask.svg'
+    }
   }
 };
+
 
 export default class Layout extends Component {
   constructor (props) {
     super (props)
   }
 
-  componentDidMount () {
+  componentDidMount() {
+    document.documentElement.className = 'js'
+    //Google Analytics
+    ReactGA.initialize('UA-XXXX-X')
+    ReactGA.pageview(document.location.pathname)
 
-    // //Google Analytics
-    // ReactGA.initialize('UA-XXXXXXXXX-X')
-    // ReactGA.pageview(document.location.pathname)
   }
+
 
   render () {
     return (
@@ -44,20 +41,24 @@ export default class Layout extends Component {
 
         <Head>
 
-          <title>{page.index.title}</title>
+          <title>Title</title>
 
           <meta charSet='utf-8'></meta>
-          <meta http-equiv='x-ua-compatible' content='ie=edge'></meta>
+          <meta httpEquiv='x-ua-compatible' content='ie=edge'></meta>
           <meta name='format-detection' content='telephone=no'></meta>
           <meta name='viewport' content='width=device-width,initial-scale=1'></meta>
           <meta content='width=device-width' name='viewport'></meta>
           <meta content='yes' name='apple-mobile-web-app-capable'></meta>
           <meta content='yes' name='apple-touch-fullscreen'></meta>
 
-          <link rel='icon' href={page.index.favicon} type='image/x-icon'></link>
+          <link rel='icon' href={page.index.favicon.ico} type='image/x-icon'></link>
+          <link rel="shortcut icon" href={page.index.favicon.ico}></link>
+          <link rel="icon" type="image/png" href={page.index.favicon.png}></link>
+          <link rel="apple-touch-icon" href={page.index.favicon.iphone}></link>
+          <link rel="mask-icon" href={page.index.favicon.svg} color="#141516"></link>
 
           {/* Google content */}
-          <meta content={page.index.title} name='application-name'></meta>
+          <meta content='Description' name='application-name'></meta>
           <meta content={page.index.description} name='description'></meta>
           <meta content={page.index.title} name='author'></meta>
           <meta content={page.index.keywords} name='keywords'></meta>
@@ -66,20 +67,26 @@ export default class Layout extends Component {
 
           {/*Facebook content*/}
           <meta content='website' property='og:type'></meta>
-          <meta content={page.index.title} property='og:title'></meta>
+          <meta content='Description' property='og:title'></meta>
           <meta content={page.index.description} property='og:description'></meta>
           <meta content={page.index.facebookShare} property='og:image'></meta>
           <meta content={page.index.url} property='og:url'></meta>
+          <meta content='1200' property='og:image:width'></meta>
+          <meta content='630' property='og:image:height'></meta>
+          <meta content='Description' property='og:site_name'></meta>
 
 
           {/*Twitter content*/}
-          <meta content='summary' name='twitter:card'></meta>
-          <meta content={page.index.title} name='twitter:title'></meta>
+          <meta content='summary_large_image' name='twitter:card'></meta>
+          <meta content='Description' name='twitter:title'></meta>
           <meta content={page.index.description} name='twitter:description'></meta>
           <meta content={page.index.twitterShare} name='twitter:image'></meta>
+          <meta content='@eugeneross' name='twitter:site'></meta>
+          <meta content='@eugeneross' name='twitter:creator'></meta>
 
-          <style dangerouslySetInnerHTML={{ __html: stylesheet }}/>
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,800" rel="stylesheet" />
 
+          {/* <style dangerouslySetInnerHTML={{ __html: stylesheet }}/> */}
 
         </Head>
 
