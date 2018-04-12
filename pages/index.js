@@ -7,7 +7,7 @@ import Layout from 'containers/Layout'
 
 // Components
 import Button from 'components/Button'
-import Container from 'components/Container'
+
 
 export default class Index extends Component {
 	constructor(props) {
