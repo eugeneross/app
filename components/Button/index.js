@@ -18,17 +18,16 @@ export default class Button extends Component {
         return (
             this.props.href
                 ? (
-                    <a className={styles.btn + this.props.className} target='_blank' href={this.props.href}>
+                    <a className={`${styles.btn} ${this.props.className}`} target='_blank' href={this.props.href}>
                         {this.props.text}
                     </a>
                 ) : (
                     <Link href={this.props.link}>
-                        <a className={styles.btn + this.props.className}>
+                        <a className={`${styles.btn} ${this.props.className}`}>
                             {this.props.text}
                         </a>
                     </Link>
                 )
-
         )
     }
 }

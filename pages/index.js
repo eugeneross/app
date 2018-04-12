@@ -7,6 +7,7 @@ import Layout from 'containers/Layout'
 
 // Components
 import Button from 'components/Button'
+import Container from 'components/Container'
 
 export default class Index extends Component {
 	constructor(props) {
@@ -25,11 +26,14 @@ export default class Index extends Component {
 					<main>
 					<p>Sup index</p>
 					<Link href='/about'><a>About</a></Link>
-					<Button 
-						className='book'
-						text="I'm a button"
-						link='/about'
-					/>
+					
+						<Button 
+							className='book'
+							text="I'm a button"
+							href='/about'
+						/>
+					
+					
 					</main>
 				</Layout>
 
