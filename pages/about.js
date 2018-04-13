@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import Link from               'next/link'
 
-import Layout from 'containers/Layout'
 
 export default class About extends Component {
 	constructor(props) {
@@ -15,14 +14,14 @@ export default class About extends Component {
 		return (
 			<div>
 
-				<Layout>
+		
 					<main>
 						<p>Sup about</p>
 						<Link href='/'>
 							<a>Back</a>
 						</Link>
 					</main>
-				</Layout>
+			
 
 			</div>
 		)

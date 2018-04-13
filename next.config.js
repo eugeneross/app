@@ -4,9 +4,10 @@ const withSASS = require('@zeit/next-sass')
 
 module.exports = withSASS({
   cssModules: true,
-  cssLoaderOptions: {
+  sassLoaderOptions: {
     importLoaders: 1,
     localIdentName: "[local]",
+    //includePaths: ['styles/index.sass', 'node_modules']
   },
   distDir: 'public',
 
@@ -18,36 +19,37 @@ module.exports = withSASS({
   }, 
 
   webpack: (config, { dev }) => {
-  
+    config.module.rules.push(
+      {
+        test: /\.(css|sass)/,
+        loader: 'emit-file-loader',
+        options: {
+          name: 'dist/[path][name].[ext]'
+        }
+      }
+      ,
+      {
+        test: /\.css$/,
+        use: ['babel-loader', 'raw-loader', 'postcss-loader']
+      }
+      ,
+      {
+        test: /\.s(a|c)ss$/,
+        use: ['babel-loader', 'raw-loader', 'postcss-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: ['styles', 'node_modules']
+                .map((d) => path.join(__dirname, d))
+                .map((g) => glob.sync(g))
+                .reduce((a, c) => a.concat(c), [])
+            }
+          }
+        ]
+      }
+    )
     return config
   }
 })
 
-  // config.module.rules.push(
-    //   {
-    //     test: /\.(css|sass)/,
-    //     loader: 'emit-file-loader',
-    //     options: {
-    //       name: 'dist/[path][name].[ext]'
-    //     }
-    //   }
-    // ,
-    //   {
-    //     test: /\.css$/,
-    //     use: ['babel-loader', 'raw-loader', 'postcss-loader']
-    //   }
-    // ,
-    //   {
-    //     test: /\.s(a|c)ss$/,
-    //     use: ['babel-loader', 'raw-loader', 'postcss-loader', 
-    //       { loader: 'sass-loader',
-    //         options: {
-    //           includePaths: ['styles', 'node_modules']
-    //             .map((d) => path.join(__dirname, d))
-    //             .map((g) => glob.sync(g))
-    //             .reduce((a, c) => a.concat(c), [])
-    //         }
-    //       }
-    //     ]
-    //   }
-    // )
+ 
