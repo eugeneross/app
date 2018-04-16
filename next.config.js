@@ -4,10 +4,10 @@ const withSASS = require('@zeit/next-sass')
 
 module.exports = withSASS({
   cssModules: true,
-  sassLoaderOptions: {
+  cssLoaderOptions: {
     importLoaders: 1,
-    localIdentName: '[local]'
-    // includePaths: ['styles', 'node_modules']
+    localIdentName: '[local]',
+    //includePaths: ['styles', 'node_modules']
   },
   distDir: 'public',
 

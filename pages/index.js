@@ -24,7 +24,7 @@ export default class Index extends Component {
 					<Link href='/about'><a>About</a></Link>
 					
 						<Button 
-							className='book'
+							className='color-primary'
 							text="I'm a button"
 							href='/about'
 						/>
