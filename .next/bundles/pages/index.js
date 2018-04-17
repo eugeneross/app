@@ -4,7 +4,7 @@ module.exports =
           var comp = 
       webpackJsonp([3],{
 
-/***/ "./components/Button.js":
+/***/ "./components/Button/index.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,9 +12,11 @@ module.exports =
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__("./node_modules/next/link.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__index_sass__ = __webpack_require__("./components/Button/index.sass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__index_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__index_sass__);
 
 
-var _jsxFileName = '/Users/eugeneross/Sites/tortuga/components/Button.js';
+var _jsxFileName = '/Users/eugeneross/Sites/tortuga/components/Button/index.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -34,6 +36,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+// Styles
+
+
 var Button = function (_Component) {
     _inherits(Button, _Component);
 
@@ -51,9 +56,9 @@ var Button = function (_Component) {
         value: function render() {
             return this.props.href ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
-                { className: 'btn ' + this.props.className, target: '_blank', href: this.props.href, __source: {
+                { className: __WEBPACK_IMPORTED_MODULE_2__index_sass___default.a.btn + ' ' + this.props.className, target: '_blank', href: this.props.href, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 18
+                        lineNumber: 21
                     }
                 },
                 this.props.text
@@ -61,14 +66,14 @@ var Button = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
                 { href: this.props.link, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 22
+                        lineNumber: 25
                     }
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'a',
-                    { className: 'btn ' + this.props.className, __source: {
+                    { className: __WEBPACK_IMPORTED_MODULE_2__index_sass___default.a.btn + ' ' + this.props.className, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 23
+                            lineNumber: 26
                         }
                     },
                     this.props.text
@@ -98,8 +103,8 @@ var _default = Button;
         return;
     }
 
-    reactHotLoader.register(Button, 'Button', '/Users/eugeneross/Sites/tortuga/components/Button.js');
-    reactHotLoader.register(_default, 'default', '/Users/eugeneross/Sites/tortuga/components/Button.js');
+    reactHotLoader.register(Button, 'Button', '/Users/eugeneross/Sites/tortuga/components/Button/index.js');
+    reactHotLoader.register(_default, 'default', '/Users/eugeneross/Sites/tortuga/components/Button/index.js');
     leaveModule(module);
 })();
 
@@ -1051,7 +1056,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__("./node_modules/next/link.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Button__ = __webpack_require__("./components/Button.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Button__ = __webpack_require__("./components/Button/index.js");
 
 
 var _jsxFileName = '/Users/eugeneross/Sites/tortuga/pages/index.js';
@@ -1139,9 +1144,9 @@ var Index = function (_Component) {
 						)
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Button__["a" /* default */], {
-						className: 'book',
+						className: 'color-primary',
 						text: 'I\'m a button',
-						link: '/about',
+						href: '/about',
 						__source: {
 							fileName: _jsxFileName,
 							lineNumber: 26

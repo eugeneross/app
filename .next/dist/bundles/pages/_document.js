@@ -149,7 +149,7 @@ var MyDocument = function (_Document) {
     }, {
         key: 'render',
         value: function render() {
-            //console.log('test', stylesheet);
+            console.log('test', __WEBPACK_IMPORTED_MODULE_4__styles_index_sass___default.a);
             return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
                 'html',
                 {
@@ -340,6 +340,11 @@ var MyDocument = function (_Document) {
                             fileName: _jsxFileName,
                             lineNumber: 89
                         }
+                    }),
+                    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('link', { rel: 'stylesheet', href: '/_next/static/style.css', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 91
+                        }
                     })
                 ),
                 __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
@@ -407,13 +412,9 @@ var MyDocument = function (_Document) {
 /***/ "./styles/index.sass":
 /***/ (function(module, exports) {
 
-;
-
-(function () {
-  "use strict";
-
-  module.exports = "html {\n  height: 100%;\n  background: white;\n  font-size: 1rem;\n  min-width: 18.75rem;\n  overflow-x: hidden;\n  overflow-y: scroll;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-touch-callout: none;\n  -webkit-overflow-scrolling: touch; }\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: 'Open sans' !important;\n  position: relative;\n  color: blue;\n  line-height: 1.5;\n  width: 100vw;\n  overflow-x: hidden;\n  letter-spacing: -.02rem; }\n";
-})();
+module.exports = {
+	"container": "container"
+};
 
 /***/ }),
 

@@ -1,10 +1,10 @@
-// @import '~normalize.css'
+//@import '~normalize.css'
 // @import '~bulma'
 
 @import 'utilities/breakpoints'
 
 body
-  background: white
+  background: black
   //-webkit-font-smoothing: subpixel-antialiased
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
@@ -19,7 +19,9 @@ body
     padding-right: 40px
 
 p
-  color: green
+  color: orange
+  +tablet
+    color: blue
 
 @import 'utilities/variables'
 @import 'utilities/keyframes'
