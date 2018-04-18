@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
 
 
     render() {
-        console.log('test', stylesheet);
+        console.log(stylesheet)
         return (
             <html>
                 <Head>
@@ -85,15 +85,17 @@ export default class MyDocument extends Document {
                     <meta content='@eugeneross' name='twitter:creator'></meta>
 
                     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,800" rel="stylesheet" />
-                    
-                    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+                  
+                    {/* <style dangerouslySetInnerHTML={{ __html: stylesheet }} /> */}
                     
                     <link rel="stylesheet" href="/_next/static/style.css" />
 
                 </Head>
                 <body>
+                   
                     <Main />
                     <NextScript />
+                    
                 </body>
             </html>
         )

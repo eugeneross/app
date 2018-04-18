@@ -15,10 +15,8 @@ export default class Index extends Component {
 	}
 	render() {
 		return (
-
 			<div>
 
-				
 					<main>
 					<p>Sup index</p>
 					<Link href='/about'><a>About</a></Link>
@@ -31,9 +29,9 @@ export default class Index extends Component {
 
 
 					</main>
-				
+				</div>
 
-			</div>
+		
 
 		)
 	}
