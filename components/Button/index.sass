@@ -1,5 +1,6 @@
 @import '../../styles/utilities/variables'
 @import '../../styles/utilities/breakpoints'
+@import '../../styles/utilities/mixins'
     
 .btn
   position: relative
@@ -13,12 +14,12 @@
   font-size: .7rem
   font-weight: 700
   letter-spacing: 1px
-  border-radius: 100px
+  border-radius: $rounded
   outline: none
   border: none
   text-transform: uppercase
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06)
-  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  +cubic (.25s)
   +medium-phone
     padding: 1rem 1.3rem
     font-size: .9rem
@@ -34,11 +35,11 @@
     box-shadow: inset 0px 0px 0px 1px $color-primary
   &.ghost-white
     background: transparent
-    color: white
+    color: $white
     box-shadow: inset 0px 0px 0px 1px white
     &:hover
       background: transparent
-      color: white
+      color: $white
       box-shadow: inset 0px 0px 0px 1px white
       text-decoration: none
       cursor: pointer
@@ -48,9 +49,9 @@
     cursor: pointer
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
     transform: translateY(-1px)
-    color: initial !important
+    color: $white
   &.nav
-    background: white
+    background: $white
     padding: .8rem 1.5rem
     font-size: .6rem
     span
@@ -68,7 +69,7 @@
   &.background-primary,
   &.background-secondary
     &:hover
-      color: white
+      color: $white
   &.color-primary
     &:hover
       color: $color-primary
