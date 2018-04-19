@@ -1,8 +1,19 @@
-// @import '~normalize.css'
-// @import '~bulma'
+@import '~normalize.css'
 
+@import 'utilities/variables'
 @import 'utilities/breakpoints'
+@import 'utilities/typography'
+
+@import '~bulma'
+
+
+
+
 @import '../components/Button/index'
+@import '../components/Container/index'
+@import '../components/CTA/index'
+
+
 
 body
   background: black
@@ -14,16 +25,29 @@ body
   position: relative
   margin: 0
 
-+desktop
-  .container
-    padding-left: 40px
-    padding-right: 40px
 
-p
-  color: orange
-  +tablet
-    color: yellow
 
-// @import 'utilities/variables'
 // @import 'utilities/keyframes'
 
+.color-primary
+  color: $color-primary
+.color-secondary
+  color: $color-secondary
+.color-white
+  color: $white
+.color-black
+  color: $black
+
+.background-primary
+  background: $background-primary
+.background-secondary
+  background: $background-secondary
+.background-white
+  background: $white
+.background-black
+  background: $black
+
+.columns:last-child
+  margin-bottom: 0 !important
+.columns
+  margin: 0
