@@ -3,10 +3,9 @@
 @import 'utilities/variables'
 @import 'utilities/breakpoints'
 @import 'utilities/typography'
+@import 'utilities/colors'
 
 @import '~bulma'
-
-
 
 
 @import '../components/Button/index'
@@ -14,38 +13,37 @@
 @import '../components/CTA/index'
 
 
-
-body
-  background: black
-  //-webkit-font-smoothing: subpixel-antialiased
+html
+  height: 100%
+  background: $white
+  font-size: 1rem
+  min-width: 18.75rem
+  overflow-x: hidden
+  overflow-y: scroll
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  -webkit-tap-highlight-color: transparent
+  -webkit-touch-callout: none
   -webkit-overflow-scrolling: touch
-  min-height: 100vh
-  position: relative
+  text-rendering: optimizeLegibility
+  text-size-adjust: 100%
+  
+body
   margin: 0
+  padding: 0
+  font-family: 'Open sans', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+  position: relative
+  background: $white
+  color: $black
+  line-height: 1.5
+  width: 100vw
+  overflow-x: hidden
+
 
 
 
 // @import 'utilities/keyframes'
 
-.color-primary
-  color: $color-primary
-.color-secondary
-  color: $color-secondary
-.color-white
-  color: $white
-.color-black
-  color: $black
-
-.background-primary
-  background: $background-primary
-.background-secondary
-  background: $background-secondary
-.background-white
-  background: $white
-.background-black
-  background: $black
 
 .columns:last-child
   margin-bottom: 0 !important
