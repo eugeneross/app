@@ -7,7 +7,7 @@ import styles from './index.sass'
 import Button from '../Button'
 
 
-export default class CTA extends Component {
+export default class DetailedCTA extends Component {
     constructor(props) {
         super(props)
     }
@@ -22,6 +22,62 @@ export default class CTA extends Component {
         return (
             this.props.position == 'left'
                 ? (
+                    <section className={`${styles.cta} ${this.props.position} ${styles.detailed} ${this.props.className ? this.props.className : ''}`}>
+                        <div className={`${styles.container}`}>
+                            <div className='columns'>
+                                <div className='column is-6'>
+                                    <div className={`${styles.content}`}>
+                                        <div className={`${styles.visual} ${styles.right}`}>
+                                            <img src={`${this.props.image}`} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='column is-6'>
+                                    <div className={`${styles.content}`}>
+                                        <h2 className={`${this.props.headingColor ? this.props.headingColor : ''}`}>
+                                            {this.props.headingText}
+                                        </h2>
+                                        <div className={`${styles.info}`}>
+                                            <div className={`${styles.block}`}>
+                                                <h3>
+                                                    {this.props.subHeadingOne}
+                                                </h3> 
+                                                <p>
+                                                    {this.props.paraOne}
+                                                </p>
+                                            </div>
+                                            <div className={`${styles.block}`}>
+                                                <h3>
+                                                    {this.props.subHeadingTwo}
+                                                </h3>
+                                                <p>
+                                                    {this.props.paraTwo}
+                                                </p>
+                                            </div>
+                                            <div className={`${styles.block}`}>
+                                                <h3>
+                                                    {this.props.subHeadingThree}
+                                                </h3>
+                                                <p>
+                                                    {this.props.paraThree}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className={`${styles.actions}`}>
+                                            <Button
+                                                className='background-primary color-white'
+                                                link='/about'
+                                                text='Get in Touch'
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                ) :  (
+
                     <section className={`${styles.cta} ${this.props.position} ${this.props.className ? this.props.className : ''}`}>
                         <div className={`${styles.container}`}>
                             <div className='columns'>
@@ -53,74 +109,7 @@ export default class CTA extends Component {
                             </div>
                         </div>
                     </section>
-                ) : 
-                
-                this.props.position == 'right' ? (
-
-                    <section className={`${styles.cta} ${this.props.position} ${this.props.className ? this.props.className : ''}`}>
-                        <div className={`${styles.container}`}>
-                            <div className='columns'>
-                                <div className='column is-6'>
-                                    <div className={`${styles.content}`}>
-                                        <div className={`${styles.visual} ${styles.right}`}>
-                                            <img src={`${this.props.image}`} />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='column is-6'>
-                                    <div className={`${styles.content}`}>
-                                        <h2 className={`${this.props.headingColor ? this.props.headingColor : ''}`}>
-                                            {this.props.headingText}
-                                        </h2>
-                                        <p className={`${this.props.paraColor ? this.props.paraColor : ''}`}>
-                                            {this.props.paraText}
-                                        </p>
-                                        <div className={`${styles.actions}`}>
-                                            <Button
-                                                className='background-primary color-white'
-                                                link='/about'
-                                                text='Get in Touch'
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-                    
-
-                ) : (
-                        <section className={`${styles.cta} ${this.props.position} ${this.props.className ? this.props.className : ''}`}>
-                            <div className={`${styles.container}`}>
-                            <div className='columns'>
-                                <div className='column'>
-                                    <div className={`${styles.content}`}>
-                                        <h2 className={`${this.props.headingColor ? this.props.headingColor : ''}`}>
-                                            {this.props.headingText}
-                                        </h2>
-                                        <p className={`${this.props.paraColor ? this.props.paraColor : ''}`}>
-                                            {this.props.paraText}
-                                        </p>
-                                        <div className={`${styles.actions}`}>
-                                            <Button
-                                                className='background-primary color-white'
-                                                link='/about'
-                                                text='Get in Touch'
-                                            />
-                                            {/* <Button
-                                                className='background-primary color-white'
-                                                link='/about'
-                                                text='Get in Touch'
-                                            /> */}
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </section>
-                )
+            )
         )
     }
 }

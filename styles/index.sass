@@ -2,16 +2,26 @@
 
 @import 'utilities/variables'
 @import 'utilities/breakpoints'
-@import 'utilities/typography'
 @import 'utilities/colors'
 
-@import '~bulma'
 
+@import '~bulma/sass/utilities/_all'
+@import '~bulma/sass/base/_all'
+@import '~bulma/sass/grid/columns'
+@import '~bulma/sass/components/level'
+@import '~bulma/sass/components/navbar'
+@import '~bulma/sass/layout/_all'
+
+@import 'utilities/typography'
 
 @import '../components/Button/index'
 @import '../components/Container/index'
 @import '../components/CTA/index'
+@import '../components/DetailedCTA/index'
+@import '../components/Points/index'
 
+.undefined 
+  border: 1px solid red !important
 
 html
   height: 100%
@@ -49,3 +59,4 @@ body
   margin-bottom: 0 !important
 .columns
   margin: 0
+

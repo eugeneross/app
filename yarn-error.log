@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js build
+  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js dev
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/eugeneross/Library/Android/sdk/tools:/Users/eugeneross/Library/Android/sdk/platform-tools
@@ -35,7 +35,7 @@ npm manifest:
       "babel-plugin-wrap-in-js": "^1.1.0",
       "bulma": "^0.4.2",
       "glob": "7.1.2",
-      "next": "^6.0.0-canary.4",
+      "next": "5.1.0",
       "node-sass": "^4.7.2",
       "normalize.css": "7.0.0",
       "postcss-css-variables": "^0.8.1",
@@ -51,7 +51,6 @@ npm manifest:
       "sass-loader": "^6.0.7",
       "style-loader": "^0.20.3",
       "styled-jsx": "2.2.5",
-      "styled-jsx-plugin-sass": "^0.2.4",
       "styled-jsx-postcss": "^0.2.0"
     }
   }
@@ -6596,7 +6595,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c next build
+  Arguments: -c next
   Directory: /Users/eugeneross/Sites/tortuga
   Output:
   

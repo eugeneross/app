@@ -1,4 +1,6 @@
 @import '../../styles/utilities/breakpoints'
+@import '../../styles/utilities/variables'
+@import '../../styles/utilities/colors'
     
 .cta  
   margin-right: auto
@@ -8,32 +10,39 @@
     &.left,
     &.right
       text-align: left
-      .container
-        max-width: 100%
       .actions
         justify-content: flex-start
-    &.left
-      .container
-        .columns
-          +tablet
-            flex-direction: row-reverse
-            .column
-              &:nth-child(even)
-                padding-right: 2.5rem
-              &:nth-child(odd)
-                padding-left: 2.5rem
-                justify-content: flex-start
-    &.right
-      .container
-        .columns
-          +tablet
-            flex-direction: row
-            .column
-              &:nth-child(even)
-                padding-left: 2.5rem
-              &:nth-child(odd)
-                padding-right: 2.5rem
-                justify-content: flex-end
+  &.left
+    .container
+      .columns
+        +tablet
+          flex-direction: row-reverse
+          .column
+            &:nth-child(even)
+              padding-right: 2.5rem
+            &:nth-child(odd)
+              padding-left: 2.5rem
+              justify-content: flex-start
+  &.right
+    .container
+      .columns
+        +tablet
+          flex-direction: row
+          .column
+            &:nth-child(even)
+              padding-left: 2.5rem
+            &:nth-child(odd)
+              padding-right: 2.5rem
+              justify-content: flex-end
+  &.small, &.center
+    .container
+      min-height: 0
+      max-width: 50rem
+      //padding: 1.5rem 0
+      h2
+        font-size: calc(.5rem + 3vw)
+        +tablet
+          font-size: 1.5rem
       
   .container
     // padding: 2.5rem 1.25rem
@@ -45,15 +54,18 @@
     flex-wrap: wrap
     justify-content: center
     align-items: center
-    // +tablet
-    //   max-width: 100%
+    +tablet
+      max-width: 62rem
+    +desktop
+      max-width: 88.125rem
     // +tablet
     //   padding: 1.5rem 3rem
-    +tablet
+    
       .columns:nth-child(odd) .column:nth-child(even)
         display: flex
         align-items: center
     .columns
+      margin: 0 auto
       display: flex
       flex-direction: column
       +tablet
@@ -80,7 +92,7 @@
         margin-left: auto
         // &.right
         //   justify-content: flex-end
-    h2.heading
+    h2
       font-size: calc(.8rem + 3vw)
       font-weight: 800
       letter-spacing: .02em
@@ -90,7 +102,7 @@
       //   font-size: calc(.2rem + 4vw)
       +tablet
         font-size: 2rem
-    p.text
+    p
       color: #585858
       font-size: 1rem
       margin-bottom: 1rem
@@ -103,5 +115,10 @@
       justify-content: center
       align-items: center
       margin: 0 auto
+    // .btn:first-child, .btn:last-child
+    //   margin: .5rem 1rem
+    //   //display: inline-block
+    //   +tablet
+    //     margin: 0 .5rem
+
  
-    
