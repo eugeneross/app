@@ -1,44 +1,43 @@
 const path = require('path')
 const glob = require('glob')
+const withSASS = require('@zeit/next-sass')
 
-module.exports = {
+const commonsChunkConfig = (config, test = /\.css$/) => {
+  config.plugins = config.plugins.map(plugin => {
+    if (
+      plugin.constructor.name === 'CommonsChunkPlugin' &&
+      plugin.minChunks != null
+    ) {
+      const defaultMinChunks = plugin.minChunks;
+      plugin.minChunks = (module, count) => {
+        if (module.resource && module.resource.match(test)) {
+          return true;
+        }
+        return defaultMinChunks(module, count);
+      };
+    }
+    return plugin;
+  });
+  return config;
+};
+
+module.exports = withSASS({
+  cssModules: true,
+  cssLoaderOptions: {
+    localIdentName: '[local]'
+  },
+
   distDir: 'public',
 
-  // exportPathMap: function () {
-  //   return {
-  //     "/": { page: "/" }
-  //   }
-  // }, Uncomment for static mode
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+      "/about": { page: "/about" },
+    }
+  },
 
-  webpack: (config, { dev }) => {
-    config.module.rules.push(
-      {
-        test: /\.(css|sass)/,
-        loader: 'emit-file-loader',
-        options: {
-          name: 'dist/[path][name].[ext]'
-        }
-      }
-    ,
-      {
-        test: /\.css$/,
-        use: ['babel-loader', 'raw-loader', 'postcss-loader']
-      }
-    ,
-      {
-        test: /\.s(a|c)ss$/,
-        use: ['babel-loader', 'raw-loader', 'postcss-loader',
-          { loader: 'sass-loader',
-            options: {
-              includePaths: ['styles', 'node_modules']
-                .map((d) => path.join(__dirname, d))
-                .map((g) => glob.sync(g))
-                .reduce((a, c) => a.concat(c), [])
-            }
-          }
-        ]
-      }
-    )
-    return config
-  }
-}
+  webpack: config => {
+    config = commonsChunkConfig(config, /\.(sass|scss|css)$/);
+    return config;
+  },
+});
