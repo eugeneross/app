@@ -2,7 +2,7 @@ import Document, { Head, Main, NextScript } from 'next/document'
 
 import ReactGA from 'react-ga'
 
-import stylesheet from 'styles/index.sass'
+import stylesheet from '../styles/index.sass'
 
 const page = {
     index: {
@@ -37,7 +37,10 @@ export default class MyDocument extends Document {
 
 
     render() {
-        console.log(stylesheet)
+        //console.log(stylesheet)
+        const { buildManifest } = this.props
+        const { css } = buildManifest
+
         return (
             <html>
                 <Head>
@@ -86,9 +89,17 @@ export default class MyDocument extends Document {
 
                     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,800" rel="stylesheet" />
                   
-                    {/* <style dangerouslySetInnerHTML={{ __html: stylesheet }} /> */}
+                
                     
-                    <link rel="stylesheet" href="/_next/static/style.css" />
+                    {css.map(file => {
+                        return (
+                            <link
+                                rel="stylesheet"
+                                href={`/_next/${file}`}
+                                key={file}
+                            />
+                        );
+                    })}
 
                 </Head>
                 <body>
