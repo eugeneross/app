@@ -22,7 +22,7 @@ nav
         display: none
       span
         text-transform: uppercase
-        color: $secondary-color
+        color: $color-secondary
         font-weight: 800
         letter-spacing: 1px
         font-size: 1rem
@@ -32,15 +32,7 @@ nav
   &.secondary
     .navbar-item:not(.logo),
     a.navbar-item
-      color: $secondary-color
-      &.btn.nav
-        background: $secondary-color
-        span
-          color: white
-          &:before
-            position: absolute
-            content: ''
-            background: url(/static/images/white-phone.svg)
+      color: $color-secondary
 
   &.navbar
     //height: 0
@@ -72,7 +64,7 @@ nav
     .navbar-items
       .navbar-item
         &:before
-          background: $secondary-color
+          background: $color-secondary
       .navbar-item:hover
         &:before
           transform: scaleY(1)
@@ -95,12 +87,8 @@ nav
       &:hover
         transform: translateY(-3px)
         background: white
-      span
-        color: black
-        &::before
-          background: url(/static/images/primary-phone.svg)
-  .navbar-item
 
+  .navbar-item
     margin: 0
     +tablet
       padding: 0
@@ -137,19 +125,7 @@ nav
       transition: all .5s cubic-bezier(0.22, 0.61, 0.36, 1)
     &.active
       font-weight: 500
-    &.phone
-      position: absolute
-      right: 0
-      bottom: -50px
-      +desktop
-        position: relative
-        bottom: 0
-      svg
-        width: 2.5rem
-        +desktop
-          width: 2rem
-
-// .menu-open, .menu-close
+   
 
 nav
   .navbar-items
@@ -227,7 +203,7 @@ nav
       top: -80%
       left: -50%
       position: absolute
-      background: $secondary-color
+      background: $color-secondary
       border-radius: 50%
       z-index: -1
       transition: all 1s ease

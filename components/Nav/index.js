@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 
+import styles from './index.sass'
+
 
 import Button from '../Button'
+import {NumieLogo} from '../SVG/Logos'
 
 export default class Nav extends Component {
     constructor(props) {
@@ -75,10 +78,10 @@ export default class Nav extends Component {
                                 {
                                     this.props.logo
                                         ? (
-                                            <ZbodsLogoWhite />
+                                            <NumieLogo />
                                         )
                                         : (
-                                            <ZbodsLogoColor />
+                                            <NumieLogo />
                                         )
                                 }
                             </a>
@@ -110,9 +113,14 @@ export default class Nav extends Component {
                                 className={this.props.pathname === '/contact' ? 'navbar-item contact-link hide-nav active' : 'navbar-item hide-nav contact-link'}>
                                 <div>Contact</div>
                             </a>
-                            <a className='navbar-item btn nav call-us-btn hide-nav' target='_blank' href='tel:6026892111'>
+                            {/* <a className='navbar-item btn nav call-us-btn hide-nav' target='_blank' href='tel:6026892111'>
                                 <span>Call Us</span>
-                            </a>
+                            </a> */}
+                            <Button 
+                                className='navbar-item nav call-us-btn hide-nav'
+                                href='tel:6026892111'
+                                text='Call Us'
+                            />
 
                         </div>
                         <div

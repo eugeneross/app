@@ -5,7 +5,7 @@ export class NumieLogo extends Component {
     return (
       <svg viewBox="0 0 15 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
         <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-          <g id="Desktop---Contact" transform="translate(-144.000000, -732.000000)" fill="#DEDEDE">
+          <g id="Desktop---Contact" transform="translate(-144.000000, -732.000000)" fill="000000">
             <g id="Group-8" transform="translate(144.000000, 732.000000)">
               <g id="Page-1">
                 <polygon id="Fill-4" points="14.376338 14.102024 14.5777968 13.9014228 14.5777968 12.3971643 10.7516398 8.58639279 10.7516398 13.9325852 12.5260362 15.6998697 12.6575755 15.8327355"></polygon>

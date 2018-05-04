@@ -3,13 +3,14 @@ import React, {Component} from  'react'
 import Link from   'next/link'
 
 // Components
-
+import Nav from 'components/Nav'
 import CTA from 'components/CTA'
 import DetailedCTA from 'components/DetailedCTA'
 import Points from 'components/Points'
 import Button from 'components/Button'
 
 import { PointsCircle } from 'components/SVG/PointsCircle'
+import { NumieLogo } from '../components/SVG/Logos';
 
 export default class Index extends Component {
 	constructor(props) {
@@ -24,6 +25,11 @@ export default class Index extends Component {
 			<div>
 
 					<main>
+
+						<Nav
+							theme='secondary'
+							
+						/>
 
 					<CTA
 						position='left'
