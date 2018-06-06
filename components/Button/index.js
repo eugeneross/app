@@ -14,6 +14,13 @@ export default class Button extends Component {
 
     }
 
+    // <Button 
+    //     className=' additional classnames '
+    //     href=' use this prop if link is outbound '
+    //     link=' use this prop if link is internal'
+    //     text=' button text '
+    // />
+
     render() {
         return (
             this.props.href

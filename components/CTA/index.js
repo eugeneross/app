@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import styles from './index.sass'
 
 import Button from '../Button'
+import Container from '../Container'
 
 
 export default class CTA extends Component {
@@ -15,21 +16,19 @@ export default class CTA extends Component {
     componentDidMount() {
 
     }
-    // {`${styles.cta} ${this.props.className}`}
-    // ${this.props.className ? this.props.className : ''}
+   
 
     render() {
         return (
             this.props.position == 'left'
                 ? (
                     <section className={`${styles.cta} ${this.props.position} ${this.props.className ? this.props.className : ''}`}>
-                        <div className={`${styles.container}`}>
+                        <Container>
                             <div className='columns'>
                                 <div className='column is-6'>
-                                    <div className={`${styles.content}`}>
-                                        <div className={`${styles.visual} ${styles.right}`}>
-                                            <img src={`${this.props.image}`} />
-                                        </div>
+                                    
+                                    <div className={`${styles.visual} ${styles.left}`}>
+                                        <img src={`${this.props.image}`} />
                                     </div>
                                 </div>
                                 <div className='column is-6'>
@@ -51,21 +50,21 @@ export default class CTA extends Component {
                                 </div>
 
                             </div>
-                        </div>
+                        </Container>
                     </section>
                 ) : 
                 
                 this.props.position == 'right' ? (
 
                     <section className={`${styles.cta} ${this.props.position} ${this.props.className ? this.props.className : ''}`}>
-                        <div className={`${styles.container}`}>
+                        <Container>
                             <div className='columns'>
                                 <div className='column is-6'>
-                                    <div className={`${styles.content}`}>
+                                    
                                         <div className={`${styles.visual} ${styles.right}`}>
                                             <img src={`${this.props.image}`} />
                                         </div>
-                                    </div>
+                                    
                                 </div>
                                 <div className='column is-6'>
                                     <div className={`${styles.content}`}>
@@ -86,14 +85,14 @@ export default class CTA extends Component {
                                 </div>
 
                             </div>
-                        </div>
+                        </Container>
                     </section>
 
                     
 
                 ) : (
                         <section className={`${styles.cta} ${this.props.position} ${this.props.className ? this.props.className : ''}`}>
-                            <div className={`${styles.container}`}>
+                            <Container>
                             <div className='columns'>
                                 <div className='column'>
                                     <div className={`${styles.content}`}>
@@ -109,16 +108,11 @@ export default class CTA extends Component {
                                                 link='/about'
                                                 text='Get in Touch'
                                             />
-                                            {/* <Button
-                                                className='background-primary color-white'
-                                                link='/about'
-                                                text='Get in Touch'
-                                            /> */}
                                         </div>
                                     </div>
                                 </div>
                                 </div>
-                            </div>
+                            </Container>
                         </section>
                 )
         )

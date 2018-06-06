@@ -13,6 +13,14 @@ export default class Container extends Component {
 
     }
 
+    // <Container
+    //     className=' addtional classnames '
+    // />
+    //
+    // Will mostly be used as wrapper component
+    //<Container></Container>
+    //
+
     render() {
         return (
             <div className={`${styles.container} ${this.props.className ? this.props.className : ''}`}>
