@@ -17,5 +17,4 @@ const mediaQuery = (...query) => (...rules) => css`
     `};
   }
 `
-
 export { mediaQuery }
