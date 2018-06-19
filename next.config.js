@@ -1,3 +1,17 @@
+// const path = require('path')
+// const glob = require('glob')
+
+// module.exports = {
+//   distDir: 'public',
+
+//   exportPathMap: function () {
+//     return {
+//       "/": { page: "/" },
+//       "/about": { page: "/about" },
+//     }
+//   }
+// }
+
 const path = require('path')
 const glob = require('glob')
 const withSASS = require('@zeit/next-sass')
@@ -8,18 +22,18 @@ const commonsChunkConfig = (config, test = /\.css$/) => {
       plugin.constructor.name === 'CommonsChunkPlugin' &&
       plugin.minChunks != null
     ) {
-      const defaultMinChunks = plugin.minChunks;
+      const defaultMinChunks = plugin.minChunks
       plugin.minChunks = (module, count) => {
         if (module.resource && module.resource.match(test)) {
-          return true;
+          return true
         }
-        return defaultMinChunks(module, count);
-      };
+        return defaultMinChunks(module, count)
+      }
     }
-    return plugin;
-  });
-  return config;
-};
+    return plugin
+  })
+  return config
+}
 
 module.exports = withSASS({
   cssModules: true,
@@ -29,15 +43,15 @@ module.exports = withSASS({
 
   distDir: 'public',
 
-  exportPathMap: function () {
+  exportPathMap: function() {
     return {
-      "/": { page: "/" },
-      "/about": { page: "/about" },
+      '/': { page: '/' },
+      '/about': { page: '/about' }
     }
   },
 
   webpack: config => {
-    config = commonsChunkConfig(config, /\.(sass|scss|css)$/);
-    return config;
-  },
-});
+    config = commonsChunkConfig(config, /\.(sass|scss|css)$/)
+    return config
+  }
+})

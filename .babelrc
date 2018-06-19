@@ -1,6 +1,5 @@
 {
   "plugins": [
-    "styled-jsx/babel",
     [
       "module-resolver", {
         "root": ["."],
@@ -10,9 +9,11 @@
         "cwd": "babelrc"
     }],
     [
-      "wrap-in-js",
+      "babel-plugin-styled-components",
       {
-        "extensions": ["css$", "sass$"]
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
       }
     ]
   ],

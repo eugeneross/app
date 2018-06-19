@@ -1,79 +1,154 @@
 // Libraries
-import React, {Component} from  'react'
-import Link from   'next/link'
+import React, { Component } from 'react'
+import Link from 'next/link'
 
 // Components
+import CTA from 'components/blocks/CTA'
+import Points from 'components/blocks/Points'
 
-import CTA from 'components/CTA'
-import DetailedCTA from 'components/DetailedCTA'
-import Points from 'components/Points'
-import Button from 'components/Button'
-
-import { PointsCircle } from 'components/SVG/PointsCircle'
+import Container from 'components/elements/Container'
 
 export default class Index extends Component {
-	constructor(props) {
-		super(props)
-	}
+  constructor(props) {
+    super(props)
+  }
 
-	componentDidMount() {
-		console.log("Index Component mounted.")
-	}
-	render() {
-		return (
-			<div>
+  componentDidMount() {
+    console.log('Index Component mounted.')
+  }
+  render() {
+    return (
+      <div>
+        <main>
+          <CTA left>
+            <Container>
+              <div className="columns">
+                <div className="column is-6">
+                  <CTA.Visual>
+                    <img src="/static/images/image.png" />
+                  </CTA.Visual>
+                </div>
+                <div className="column is-6">
+                  <CTA.Content>
+                    <CTA.Title>This is a call to action title on.</CTA.Title>
 
-					<main>
+                    <CTA.Text>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Maecenas id tortor quis nunc consequat semper ac sed eros.
+                      Mauris interdum risus erat, nec hendrerit lectus dignissim
+                      vel.
+                    </CTA.Text>
 
-					<CTA
-						position='left'
-						className='background-white'
+                    <CTA.Button tertiary>Button</CTA.Button>
+                  </CTA.Content>
+                </div>
+              </div>
+            </Container>
+          </CTA>
 
-						headingColor=''
-						headingText='This is a heading'
+          <CTA right>
+            <Container>
+              <div className="columns">
+                <div className="column is-6">
+                  <CTA.Visual>
+                    <img src="/static/images/image.png" />
+                  </CTA.Visual>
+                </div>
+                <div className="column is-6">
+                  <CTA.Content>
+                    <CTA.Title>This is a call to action title on.</CTA.Title>
 
-						paraColor=''
-						paraText='A web-based platform on a mission to incentivize and promote acts of kindness by giving away cool products and experiences. Do something positive, be kind and get rewarded.'
+                    <CTA.Text>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Maecenas id tortor quis nunc consequat semper ac sed eros.
+                      Mauris interdum risus erat, nec hendrerit lectus dignissim
+                      vel.
+                    </CTA.Text>
 
-						image='/static/images/image.png'
-					/>
+                    <CTA.Button>Button</CTA.Button>
+                  </CTA.Content>
+                </div>
+              </div>
+            </Container>
+          </CTA>
 
-					<CTA
-						position='right'
-						className='background-white'
+          <CTA center background="black">
+            <Container>
+              <div className="columns">
+                <div className="column is-8">
+                  <CTA.Title>This is a call to action title on.</CTA.Title>
 
-						headingColor=''
-						headingText='This is a heading'
+                  <CTA.Text>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas id tortor quis nunc consequat semper ac sed eros.
+                    Mauris interdum risus erat, nec hendrerit lectus dignissim
+                    vel.
+                  </CTA.Text>
 
-						paraColor=''
-						paraText='A web-based platform on a mission to incentivize and promote acts of kindness by giving away cool products and experiences. Do something positive, be kind and get rewarded.'
+                  <CTA.Button>Learn More About</CTA.Button>
+                </div>
+              </div>
+            </Container>
+          </CTA>
 
-						image='/static/images/image.png'
-					/>
+          <Points>
+            <Container>
+              <Points.Heading>
+                <Points.Title>Heading Title</Points.Title>
+              </Points.Heading>
 
-					<CTA
-						position='center'
-						className='background-white'
+              <div className="columns">
+                <div className="column is-4">
+                  <Points.Content>
+                    <Points.Visual>
+                      <img src="/static/images/points-circle.svg" />
+                    </Points.Visual>
 
-						headingColor=''
-						headingText='This is a heading'
+                    <Points.Title>Title</Points.Title>
 
-						paraColor=''
-						paraText='A web-based platform on a mission to incentivize and promote acts of kindness by giving away cool products and experiences. Do something positive, be kind and get rewarded.'
+                    <Points.Text>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Maecenas id tortor quis nunc consequat semper ac sed eros.
+                    </Points.Text>
+                  </Points.Content>
+                </div>
 
-					/>
+                <div className="column is-4">
+                  <Points.Content>
+                    <Points.Visual>
+                      <img src="/static/images/points-circle.svg" />
+                    </Points.Visual>
 
-					<CTA
-						position='small'
-						className='background-white'
+                    <Points.Title>Title</Points.Title>
 
-						headingColor=''
-						headingText='This is a heading'
+                    <Points.Text>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Maecenas id tortor quis nunc consequat semper ac sed eros.
+                    </Points.Text>
+                  </Points.Content>
+                </div>
 
-						paraColor=''
-						paraText='A web-based platform on a mission to incentivize and promote acts of kindness.'
+                <div className="column is-4">
+                  <Points.Content>
+                    <Points.Visual>
+                      <img src="/static/images/points-circle.svg" />
+                    </Points.Visual>
 
-					/>
+                    <Points.Title>Title</Points.Title>
+
+                    <Points.Text>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Maecenas id tortor quis nunc consequat semper ac sed eros.
+                    </Points.Text>
+                  </Points.Content>
+                </div>
+              </div>
+            </Container>
+          </Points>
+
+          {/*
+					
+
 
 					<Points
 						headingText='This is the points heading where the title can go'
@@ -109,14 +184,9 @@ export default class Index extends Component {
 						subHeadingThree='Invite and manage visitors'
 						paraThree='With Passport in your pocket, you can easily choose how you’d like to be notified when visitors arrive.'
 
-					/>
-
-
-					</main>
-				</div>
-
-		
-
-		)
-	}
+					/> */}
+        </main>
+      </div>
+    )
+  }
 }
