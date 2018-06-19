@@ -1,6 +1,6 @@
 {
   "name": "tortuga",
-  "version": "2.0.0-b",
+  "version": "2.0.0",
   "description": "Framework for Numie",
   "scripts": {
     "dev": "next",
