@@ -9,7 +9,7 @@
     "build-static": "next build && next export",
     "heroku-postbuild": "npm run build",
     "lint-css": "stylelint './components/**/*.js'",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged && npm run lint-css"
   },
   "license": "MIT",
   "dependencies": {
