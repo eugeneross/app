@@ -11,8 +11,6 @@ const P = styled.p`
 
   ${media.tablet`
     font-size: 1.125rem
-  `} ${media.desktop`
-    font-size: 1.25rem
   `};
 `
 
