@@ -4,8 +4,6 @@ import '../utils/globals'
 
 import ReactGA from 'react-ga'
 
-import stylesheet from '../styles/index.sass'
-
 const page = {
   index: {
     title: 'Title',
