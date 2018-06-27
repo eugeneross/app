@@ -8,8 +8,9 @@ import stylesheet from '../styles/index.sass'
 
 const page = {
   index: {
+    title: 'Title',
     description: 'Description',
-    url: 'https://ross.so',
+    url: 'https://domain.url',
     keywords: 'Keywords',
     facebookShare: '/static/images/meta/share.png',
     twitterShare: '/static/images/meta/share.png',
@@ -47,7 +48,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Title</title>
+          <title>{page.index.title}</title>
 
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -64,29 +65,29 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href={page.index.favicon.svg} color="#141516" />
 
           {/* Google content */}
-          <meta content="Description" name="application-name" />
+          <meta content={page.index.description} name="application-name" />
           <meta content={page.index.description} name="description" />
           <meta content={page.index.title} name="author" />
           <meta content={page.index.keywords} name="keywords" />
-          <meta content="2017" name="copyright" />
+          <meta content={new Date().getYear()} name="copyright" />
 
           {/*Facebook content*/}
           <meta content="website" property="og:type" />
-          <meta content="Description" property="og:title" />
+          <meta content={page.index.title} property="og:title" />
           <meta content={page.index.description} property="og:description" />
           <meta content={page.index.facebookShare} property="og:image" />
           <meta content={page.index.url} property="og:url" />
           <meta content="1200" property="og:image:width" />
           <meta content="630" property="og:image:height" />
-          <meta content="Description" property="og:site_name" />
+          <meta content={page.index.description} property="og:site_name" />
 
           {/*Twitter content*/}
           <meta content="summary_large_image" name="twitter:card" />
-          <meta content="Description" name="twitter:title" />
+          <meta content={page.index.title} name="twitter:title" />
           <meta content={page.index.description} name="twitter:description" />
           <meta content={page.index.twitterShare} name="twitter:image" />
-          <meta content="@eugeneross" name="twitter:site" />
-          <meta content="@eugeneross" name="twitter:creator" />
+          <meta content="@twitter_handle" name="twitter:site" />
+          <meta content="@twitter_handle" name="twitter:creator" />
 
           <link
             href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,800"

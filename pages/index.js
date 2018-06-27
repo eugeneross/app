@@ -2,11 +2,15 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 
+import stylesheet from '../styles/index.sass'
+
 // Components
 import CTA from 'components/blocks/CTA'
 import Points from 'components/blocks/Points'
 
 import Container from 'components/elements/Container'
+
+import { Button } from 'tortuga-lib'
 
 export default class Index extends Component {
   constructor(props) {
@@ -145,6 +149,8 @@ export default class Index extends Component {
               </div>
             </Container>
           </Points>
+
+          <Button>Tortuga Button</Button>
 
           {/*
 					
