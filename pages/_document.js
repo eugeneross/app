@@ -4,8 +4,9 @@ import '../utils/globals'
 
 const page = {
   index: {
+    title: 'Title',
     description: 'Description',
-    url: 'https://ross.so',
+    url: 'https://domain.url',
     keywords: 'Keywords',
     facebookShare: '/static/images/meta/share.png',
     twitterShare: '/static/images/meta/share.png',
@@ -48,7 +49,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Title</title>
+          <title>{page.index.title}</title>
 
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -73,7 +74,7 @@ export default class MyDocument extends Document {
 
           {/*Facebook content*/}
           <meta content="website" property="og:type" />
-          <meta content="Description" property="og:title" />
+          <meta content={page.index.title} property="og:title" />
           <meta content={page.index.description} property="og:description" />
           <meta content={page.index.facebookShare} property="og:image" />
           <meta content={page.index.url} property="og:url" />
@@ -83,7 +84,7 @@ export default class MyDocument extends Document {
 
           {/*Twitter content*/}
           <meta content="summary_large_image" name="twitter:card" />
-          <meta content="Description" name="twitter:title" />
+          <meta content={page.index.title} name="twitter:title" />
           <meta content={page.index.description} name="twitter:description" />
           <meta content={page.index.twitterShare} name="twitter:image" />
           <meta content="@twitter" name="twitter:site" />
