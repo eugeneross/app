@@ -17,7 +17,7 @@ export default class Index extends Component {
     return (
       <div>
         <main>
-          <Nav />
+          index
           
         </main>
       </div>
