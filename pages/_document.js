@@ -2,13 +2,6 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import '../utils/globals'
 
-<<<<<<< Updated upstream
-import ReactGA from 'react-ga'
-
-import stylesheet from '../styles/index.sass'
-
-=======
->>>>>>> Stashed changes
 const page = {
   index: {
     description: 'Description',
@@ -72,19 +65,11 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href={page.index.favicon.svg} color="#141516" />
 
           {/* Google content */}
-<<<<<<< Updated upstream
-          <meta content="Description" name="application-name" />
-          <meta content={page.index.description} name="description" />
-          <meta content={page.index.title} name="author" />
-          <meta content={page.index.keywords} name="keywords" />
-          <meta content="2017" name="copyright" />
-=======
           <meta content={page.index.title} name="application-name" />
           <meta content={page.index.description} name="description" />
           <meta content={page.index.title} name="author" />
           <meta content={page.index.keywords} name="keywords" />
           <meta content={new Date().getFullYear()} name="copyright" />
->>>>>>> Stashed changes
 
           {/*Facebook content*/}
           <meta content="website" property="og:type" />
@@ -94,24 +79,15 @@ export default class MyDocument extends Document {
           <meta content={page.index.url} property="og:url" />
           <meta content="1200" property="og:image:width" />
           <meta content="630" property="og:image:height" />
-<<<<<<< Updated upstream
-          <meta content="Description" property="og:site_name" />
-=======
           <meta content={page.index.title} property="og:site_name" />
->>>>>>> Stashed changes
 
           {/*Twitter content*/}
           <meta content="summary_large_image" name="twitter:card" />
           <meta content="Description" name="twitter:title" />
           <meta content={page.index.description} name="twitter:description" />
           <meta content={page.index.twitterShare} name="twitter:image" />
-<<<<<<< Updated upstream
-          <meta content="@eugeneross" name="twitter:site" />
-          <meta content="@eugeneross" name="twitter:creator" />
-=======
           <meta content="@twitter" name="twitter:site" />
           <meta content="@twitter" name="twitter:creator" />
->>>>>>> Stashed changes
 
           <link
             href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,800"

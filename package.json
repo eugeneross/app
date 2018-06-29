@@ -1,13 +1,7 @@
 {
-<<<<<<< Updated upstream
   "name": "tortuga",
-  "version": "2.0.0-b",
-  "description": "Framework for Numie",
-=======
-  "name": "zumby-platform",
   "version": "2.0.0",
-  "description": "Zumbby Platform Frontend",
->>>>>>> Stashed changes
+  "description": "Tortuga Framework",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -15,11 +9,7 @@
     "build-static": "next build && next export",
     "heroku-postbuild": "yarn build",
     "lint-css": "stylelint './components/**/*.js'",
-<<<<<<< Updated upstream
-    "precommit": "pretty-quick --staged && npm run lint-css"
-=======
     "noprecommit": "pretty-quick --staged && npm run lint-css"
->>>>>>> Stashed changes
   },
   "license": "MIT",
   "dependencies": {
@@ -30,11 +20,8 @@
     "babel-plugin-styled-components": "^1.5.1",
     "bloomer": "latest",
     "bulma": "latest",
-    "express": "^4.16.3",
     "glob": "7.1.2",
-    "isomorphic-unfetch": "^2.0.0",
-    "next": "6.0.3",
-    "node-fetch": "^2.1.2",
+    "next": "6.1.1",
     "node-sass": "^4.9.0",
     "postcss-css-variables": "^0.8.1",
     "postcss-easy-import": "^3.0.0",
