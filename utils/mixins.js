@@ -1,13 +1,13 @@
 const mixins = {
   transition: {
     cubic: time => {
-      return `transition: all ${time} cubic-bezier(0.25, 0.46, 0.45, 0.94)`
+      return `all ${time} cubic-bezier(0.25, 0.46, 0.45, 0.94)`
     },
     cubic2: time => {
-      return `transition: all ${time} cubic-bezier(.215,.61,.355,1)`
+      return `all ${time} cubic-bezier(.215,.61,.355,1)`
     },
     ease: time => {
-      return `transition: all ${time} ease-in-out)`
+      return `all ${time} ease-in-out)`
     }
   },
 

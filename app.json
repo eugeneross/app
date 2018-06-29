@@ -1,14 +1,12 @@
 {
-  "name": "Next.js",
-  "description": "Tortuga based on Next.js",
-
+  "name": "zumby-platform",
+  "scripts": {},
+  "env": {},
+  "formation": {},
+  "addons": [],
   "buildpacks": [
     {
       "url": "heroku/nodejs"
     }
-  ],
-  "scripts": {},
-  "env": {},
-  "formation": {},
-  "addons": []
+  ]
 }

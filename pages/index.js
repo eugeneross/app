@@ -1,12 +1,17 @@
 // Libraries
 import React, { Component } from 'react'
-import Link from 'next/link'
 
+<<<<<<< Updated upstream
 // Components
 import CTA from 'components/blocks/CTA'
 import Points from 'components/blocks/Points'
 
 import Container from 'components/elements/Container'
+=======
+import stylesheet from '../styles/index.sass'
+
+import Nav from '../components/Nav'
+>>>>>>> Stashed changes
 
 export default class Index extends Component {
   constructor(props) {
@@ -20,6 +25,7 @@ export default class Index extends Component {
     return (
       <div>
         <main>
+<<<<<<< Updated upstream
           <CTA left>
             <Container>
               <div className="columns">
@@ -185,6 +191,10 @@ export default class Index extends Component {
 						paraThree='With Passport in your pocket, you can easily choose how you’d like to be notified when visitors arrive.'
 
 					/> */}
+=======
+          <Nav />
+          
+>>>>>>> Stashed changes
         </main>
       </div>
     )

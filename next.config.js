@@ -1,17 +1,3 @@
-// const path = require('path')
-// const glob = require('glob')
-
-// module.exports = {
-//   distDir: 'public',
-
-//   exportPathMap: function () {
-//     return {
-//       "/": { page: "/" },
-//       "/about": { page: "/about" },
-//     }
-//   }
-// }
-
 const path = require('path')
 const glob = require('glob')
 const withSASS = require('@zeit/next-sass')
@@ -43,12 +29,11 @@ module.exports = withSASS({
 
   distDir: 'public',
 
-  exportPathMap: function() {
-    return {
-      '/': { page: '/' },
-      '/about': { page: '/about' }
-    }
-  },
+  // exportPathMap: function() {
+  //   return {
+  //     '/': { page: '/' }
+  //   }
+  // },
 
   webpack: config => {
     config = commonsChunkConfig(config, /\.(sass|scss|css)$/)
