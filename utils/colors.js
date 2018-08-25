@@ -3,8 +3,10 @@ const colors = {
   secondary: '#E03342',
   tertiary: '#505CEC',
 
-  black: 'hsl(0, 0%, 4%)',
-  white: '#ffffff'
+  black: '#141516',
+  white: '#ffffff',
+
+  text: '#282828'
 }
 
 export default colors

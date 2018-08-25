@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import colors from '../utils/colors'
+import { colors } from '../utils'
 
-const Label = styled.div`
+const Label = styled.label`
+
   display: block;
   font-size: 1rem;
   color: ${colors.primary};

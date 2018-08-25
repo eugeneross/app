@@ -1,7 +1,7 @@
 public
 out
 node_modules
-npm-debug.log
 .DS_STore
 .next
 .vscode
+*.log

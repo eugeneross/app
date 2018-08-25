@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components'
-// import is from 'is-styled'
+import styled from 'styled-components'
 
 import { Columns as BloomerColumns } from 'bloomer'
 

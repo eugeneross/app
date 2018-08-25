@@ -2,12 +2,11 @@
 import React, { Component } from 'react'
 
 import stylesheet from '../styles/index.sass'
-import styled from 'styled-components'
 
-import Nav from '../components/Nav'
-import { media } from '../utils'
+import {
+  H1
+} from '../elements'
 
-// import { Button } from 'tortuga-lib'
 
 export default class Index extends Component {
   constructor(props) {
@@ -15,14 +14,14 @@ export default class Index extends Component {
   }
 
   componentDidMount() {
-    console.log('Index Component mounted.', media)
+    console.log('Index Component mounted.')
   }
   render() {
     return (
       <div>
         <main>
 
-          <MyDiv>index</MyDiv>
+          <H1>index</H1>
 
         </main>
       </div>
@@ -30,11 +29,3 @@ export default class Index extends Component {
   }
 }
 
-const MyDiv = styled.div`
-  color: white;
-  background: gray;
-  ${media.tablet`
-    background: yellow;
-    color: black;
-  `}
-`

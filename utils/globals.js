@@ -6,7 +6,7 @@ injectGlobal`
 
 html{
   height: 100%;
-  background-color: ${colors.primary};
+  background-color: white;
   font-size: 1rem;
   min-width: 18.75rem;
   overflow-x: hidden;
@@ -30,7 +30,6 @@ body{
   width: 100vw;
   overflow-x: hidden;
   }
-
 
 .undefined {
   border: 1px solid red !important;
