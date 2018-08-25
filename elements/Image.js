@@ -1,7 +1,7 @@
 // Libraries
 import styled, { css } from 'styled-components'
 
-import { media } from '../../utils/breakpoints'
+import media from '../../utils/breakpoints'
 
 const Image = styled.div`
   position: relative;

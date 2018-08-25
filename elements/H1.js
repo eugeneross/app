@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { media } from '../utils/breakpoints'
+import media from '../utils/breakpoints'
 
 const H1 = styled.h1`
   font-size: 2.25rem;

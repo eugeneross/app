@@ -7,7 +7,7 @@ import Visual from './Visual'
 import Heading from './Heading'
 import Content from './Content'
 
-import { media } from '../../../utils/breakpoints'
+import { media } from '../../../utils'
 import colors from '../../../utils/colors'
 
 const Points = styled.section`

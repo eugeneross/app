@@ -8,7 +8,7 @@ import Visual from './Visual'
 import Content from './Content'
 import Button from './Button'
 
-import { media } from '../../../utils/breakpoints'
+import { media } from '../../../utils'
 import colors from '../../../utils/colors'
 // import modifiers from '../../../utils/modifiers';
 

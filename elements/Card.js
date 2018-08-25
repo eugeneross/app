@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rounded } from '../utils/mixins'
-import { media } from '../utils/breakpoints'
+import media from '../utils/breakpoints'
 
 const Card = styled.div`
 

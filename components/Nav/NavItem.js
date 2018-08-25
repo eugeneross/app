@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import is from 'styled-is'
 
 // Local Utilities
-import { media } from '../../utils/breakpoints'
+import media from '../../utils/breakpoints'
 import { cubic } from '../../utils/mixins'
 
 const NavItem = styled.a`

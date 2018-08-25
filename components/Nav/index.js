@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 // Local Imports
-import { media } from '../../utils/breakpoints'
+import media from '../../utils/breakpoints'
 
 // Modular Elements
 import Columns from '../../elements/Columns'

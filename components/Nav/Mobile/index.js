@@ -9,7 +9,7 @@ import Columns from '../../../elements/Columns'
 import Column from '../../../elements/Column'
 
 // Local Utilities
-import { media } from '../../../utils/breakpoints'
+import { media } from '../../../utils'
 
 export default class Mobile extends Component {
   constructor(props) {

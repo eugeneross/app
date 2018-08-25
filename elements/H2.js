@@ -1,7 +1,7 @@
 // Libraries
 import styled, { css } from 'styled-components'
 
-import { media } from '../../utils/breakpoints'
+import media from '../../utils/breakpoints'
 
 const H2 = styled.h2`
   font-size: calc(0.8rem + 3vw);
