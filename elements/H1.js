@@ -9,6 +9,7 @@ const H1 = styled.h1`
   
   ${media.tablet`
     font-size: 3rem;
-  `};
+    color: ${colors.text};
+  `}
 `
 export default H1
