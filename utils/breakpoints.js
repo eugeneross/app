@@ -11,7 +11,7 @@ const breakpoint = {
   fullhd: 90
 }
 
-export const media = {
+const media = {
   mediumPhone: mediaQuery(`(min-width: ${breakpoint.mediumPhone}rem)`),
   largePhone: mediaQuery(`(min-width: ${breakpoint.largePhone}rem)`),
   mobile: mediaQuery(`(max-width: ${breakpoint.mobile}rem)`),
@@ -21,3 +21,5 @@ export const media = {
   widescreen: mediaQuery(`(min-width: ${breakpoint.widescreen}rem)`),
   fullhd: mediaQuery(`(min-width: ${breakpoint.fullhd}rem)`)
 }
+
+export default media
