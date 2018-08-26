@@ -25,3 +25,5 @@ export const ease = mixins.transition.ease
 export const rounded = mixins.radius.rounded
 export const superRounded = mixins.radius.superRounded
 export const pill = mixins.radius.pill
+
+export default mixins
