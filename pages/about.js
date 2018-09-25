@@ -15,13 +15,15 @@ export default class About extends Component {
 		return (
 			<div>
 
-		
+		<>
 					<main>
 						<p>Sup about</p>
 						<Link href='/'>
 							<a>Back</a>
 						</Link>
 					</main>
+
+		</>
 			
 
 			</div>
