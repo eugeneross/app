@@ -7,7 +7,7 @@ const mixins = {
       return `all ${time} cubic-bezier(.215,.61,.355,1)`
     },
     ease: time => {
-      return `all ${time} ease-in-out)`
+      return `all ${time} ease-in-out`
     }
   },
 
