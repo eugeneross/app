@@ -43,8 +43,6 @@ export default class MyDocument extends Document {
 
   render() {
     // console.log(stylesheet)
-    const { buildManifest } = this.props
-    const { css } = buildManifest
 
     return (
       <html>
@@ -94,11 +92,6 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,800"
             rel="stylesheet"
           />
-
-
-          {css.map(file => {
-            return <link rel="stylesheet" href={`/_next/${file}`} key={file} />
-          })}
 
           {this.props.styleTags}
 
