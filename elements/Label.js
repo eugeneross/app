@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { colors } from '../utils'
+
+import colors from '../utils/colors'
 
 const Label = styled.label`
 

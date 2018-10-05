@@ -7,6 +7,7 @@ import stylesheet from '../styles/index.sass'
 
 import {
   H1,
+  Container
 } from '../elements'
 
 
@@ -23,7 +24,7 @@ export default class Index extends Component {
       <div>
         <main>
 
-          <H1>index</H1>
+          <Container>Sup</Container>
 
           {/* <Button>Click Me</Button> */}
 

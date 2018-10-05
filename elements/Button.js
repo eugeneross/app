@@ -1,7 +1,7 @@
 // Libraries
 import styled from 'styled-components'
 
-import { colors } from '../utils'
+import colors from '../utils/colors'
 
 import { cubic, rounded } from '../utils/mixins'
 
@@ -16,7 +16,7 @@ const Button = styled.a`
   font-weight: 700;
   letter-spacing: 1px;
   border-radius: ${rounded};
-  background: ${colors.primary};
+  background: ${props => props.white ? `${colors.white}` : `${colors.primary}` };
   color: white;
   outline: none;
   border: none;

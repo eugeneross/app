@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { media, colors } from '../utils'
+import { media } from '../utils/breakpoints'
+import colors from '../utils/colors'
 import { rounded, cubic } from '../utils/mixins';
 
 const H1 = styled.h1`

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { media } from '../utils'
+
+import { media } from '../utils/breakpoints'
 
 import { Column as BloomerColumn } from 'bloomer'
 
@@ -13,7 +14,7 @@ const Column = styled(BloomerColumn)`
             align-items: center;
             display: flex;
         `}
-    
+
     }
 
 `

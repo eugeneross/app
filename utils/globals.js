@@ -19,7 +19,7 @@ html{
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
 }
-  
+
 body{
   margin: 0;
   padding: 0;

@@ -1,7 +1,8 @@
 // Libraries
 import styled from 'styled-components'
 
-import { colors, media } from '../utils'
+import { media } from '../utils/breakpoints'
+import colors from '../utils/colors'
 
 const Text = styled.p`
   color: ${colors.text};
