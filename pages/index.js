@@ -1,7 +1,7 @@
 // Libraries
 import React, { Component } from 'react'
 
-import stylesheet from '../styles/index.sass'
+// import stylesheet from '../styles/index.sass'
 
 import {
   H1,

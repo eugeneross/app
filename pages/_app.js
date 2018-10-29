@@ -2,6 +2,7 @@ import App, { Container } from 'next/app'
 import React from 'react'
 import Head from 'next/head'
 
+import stylesheet from '../styles/index.sass'
 import GlobalStyle from '../utils/globals'
 
 class MyApp extends App {
@@ -23,9 +24,7 @@ class MyApp extends App {
         <Head>
           <title>Page Title</title>
         </Head>
-
-          <Component {...pageProps} />
-
+        <Component {...pageProps} />
       </Container>
     )
   }
