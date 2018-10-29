@@ -5,6 +5,7 @@ import { media } from '../../utils/breakpoints'
 
 const Test = styled.div`
 
+  font-family: 'Play-Bold', 'Open Sans', serif;
   position: relative;
   color: red;
 

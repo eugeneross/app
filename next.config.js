@@ -29,11 +29,12 @@ module.exports = withSASS({
 
   distDir: 'public',
 
-  // exportPathMap: function() {
-  //   return {
-  //     '/': { page: '/' }
-  //   }
-  // },
+  exportPathMap: function() {
+    return {
+      '/': { page: '/' },
+      '/about': { page: '/about' }
+    }
+  },
 
   webpack: config => {
     config = commonsChunkConfig(config, /\.(sass|scss|css)$/)

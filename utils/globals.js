@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 import colors from './colors'
+import font from './typography'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -34,6 +35,8 @@ body{
 .undefined {
   border: 1px solid red !important;
   }
+
+  ${font('Play-Bold', '600')}
 
 `
 
