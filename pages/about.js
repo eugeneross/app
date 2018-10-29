@@ -3,6 +3,10 @@ import Link from 'next/link'
 
 import stylesheet from '../styles/index.sass'
 
+import {
+	Main
+} from '../elements'
+
 export default class About extends Component {
 	constructor(props) {
 		super(props)
@@ -13,20 +17,14 @@ export default class About extends Component {
 	}
 	render() {
 		return (
-			<div>
 
-		<>
-					<main>
-						<p>Sup about</p>
-						<Link href='/'>
-							<a>Back</a>
-						</Link>
-					</main>
+			<Main>
+				<p>Sup about</p>
+				<Link href='/'>
+					<a>Back</a>
+				</Link>
+			</Main>
 
-		</>
-			
-
-			</div>
 		)
 	}
 }

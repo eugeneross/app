@@ -1,8 +1,8 @@
-import { injectGlobal } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 import colors from './colors'
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
 
 html{
   height: 100%;
@@ -25,7 +25,7 @@ body{
   padding: 0;
   font-family: 'Open sans', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   position: relative;
-  color: #141516;
+  color: ${colors.black};
   line-height: 1.5;
   width: 100vw;
   overflow-x: hidden;
@@ -36,3 +36,5 @@ body{
   }
 
 `
+
+export default GlobalStyle

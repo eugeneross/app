@@ -3,13 +3,15 @@ import React, { Component } from 'react'
 
 import stylesheet from '../styles/index.sass'
 
-// import { Button } from 'tortuga-lib'
-
 import {
   H1,
-  Container
+  Container,
+  Main
 } from '../elements'
 
+import {
+  Test
+} from '../components'
 
 export default class Index extends Component {
   constructor(props) {
@@ -22,13 +24,14 @@ export default class Index extends Component {
   render() {
     return (
       <div>
-        <main>
+        <Main>
 
-          <Container>Sup</Container>
+          <Container>
+            Sup
+            <Test/>
+          </Container>
 
-          {/* <Button>Click Me</Button> */}
-
-        </main>
+        </Main>
       </div>
     )
   }
