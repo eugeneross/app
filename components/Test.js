@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Link from 'next/link'
 
 import {
-
+  Container
 } from '../elements'
 
 import {
@@ -21,10 +21,12 @@ export default class TestComponent extends Component {
   render() {
     return (
 
-      <Test>
-        This is in Test
-        <p>this is in paragraph.</p>
-      </Test>
+      <Container>
+        <Test {...this.props}>
+          This is in Test
+          <p>this is in paragraph.</p>
+        </Test>
+      </Container>
 
     )
   }
