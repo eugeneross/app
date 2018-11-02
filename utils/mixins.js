@@ -6,6 +6,9 @@ const mixins = {
     cubic2: time => {
       return `all ${time} cubic-bezier(.215,.61,.355,1)`
     },
+    cubic3: time => {
+      return `all ${time} cubic-bezier(.86,0,.07,1)`
+    },
     ease: time => {
       return `all ${time} ease-in-out`
     }
@@ -20,6 +23,7 @@ const mixins = {
 
 export const cubic = mixins.transition.cubic
 export const cubic2 = mixins.transition.cubic2
+export const cubic3 = mixins.transition.cubic3
 export const ease = mixins.transition.ease
 
 export const rounded = mixins.radius.rounded
