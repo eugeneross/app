@@ -1,7 +1,7 @@
 // Libraries
 import styled from 'styled-components'
 
-import { media } from '../utils/breakpoints'
+import { media } from '@utils'
 
 const Container = styled.div`
   position: relative;

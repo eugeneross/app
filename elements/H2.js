@@ -1,7 +1,7 @@
 // Libraries
 import styled from 'styled-components'
 
-import { media } from '../utils/breakpoints'
+import { media } from '@utils'
 
 
 const H2 = styled.h2`

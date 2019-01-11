@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 import {
 
-} from '../elements'
+} from '@elements'
 
 import {
   Test
-} from '../components'
+} from '@components'
 
 export default class TestContainer extends Component {
   constructor(props) {

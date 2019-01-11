@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import is from 'styled-is'
 
-import colors from '../../utils/colors'
-import { media } from '../../utils/breakpoints'
+import { media } from '@utils'
 
 const Test = styled.div`
 
@@ -21,7 +20,7 @@ const Test = styled.div`
     `}
   }
 
-  ${is('red') `
+  ${is('red')`
     background: red;
   `}
 

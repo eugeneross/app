@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Columns as BloomerColumns } from 'bloomer'
+import { media } from '@utils'
 
 const Columns = styled(BloomerColumns)`
 

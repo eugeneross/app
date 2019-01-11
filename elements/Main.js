@@ -1,8 +1,7 @@
 // Libraries
 import styled from 'styled-components'
 
-import { media } from '../utils/breakpoints'
-import colors from '../utils/colors'
+import { media } from '@utils'
 
 const Main = styled.main`
 

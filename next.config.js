@@ -39,5 +39,12 @@ module.exports = withSASS({
   webpack: config => {
     config = commonsChunkConfig(config, /\.(sass|scss|css)$/)
     return config
+  },
+
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './')
+    }
   }
+
 })

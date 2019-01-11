@@ -1,11 +1,10 @@
 // Libraries
 import styled from 'styled-components'
 
-import { media } from '../utils/breakpoints'
-import colors from '../utils/colors'
+import { media } from '@utils'
 
 const Text = styled.p`
-  color: ${colors.text};
+  color: ${theme.colors.text};
   font-size: 1rem;
   margin-bottom: 1rem;
   line-height: 1.8;

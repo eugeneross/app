@@ -1,10 +1,6 @@
 // Libraries
 import styled from 'styled-components'
 
-import colors from '../utils/colors'
-
-import { cubic, rounded } from '../utils/mixins'
-
 const Button = styled.a`
   position: relative;
   display: inline-block;
@@ -15,15 +11,15 @@ const Button = styled.a`
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 1px;
-  border-radius: ${rounded};
-  background: ${props => props.white ? `${colors.white}` : `${colors.primary}` };
+  border-radius: .25rem;
+  background: ${props => props.white ? `${theme.colors.white}` : `${theme.colors.primary}` };
   color: white;
   outline: none;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06);
-  transition: ${cubic('.3s')};
+  transition: ${theme.transitions.cubic('.3s')};
 
     &:hover{
       text-decoration: none;

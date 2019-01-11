@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 
-import colors from '../utils/colors'
-
 const Label = styled.label`
 
   display: block;
   font-size: 1rem;
-  color: ${colors.primary};
+  color: ${theme.colors.primary};
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-variant: small-caps;

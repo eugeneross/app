@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-import { media } from '../utils/breakpoints'
-
-import { rounded } from '../utils/mixins'
+import { media } from '@utils'
 
 const Card = styled.div`
 
@@ -10,7 +8,7 @@ const Card = styled.div`
   padding: 1.25rem;
   background: white;
   box-shadow: 0px 2px 5px rgba(14, 30, 37, 0.06);
-  border-radius: ${rounded};
+  border-radius: .25rem;
 
   ${media.tablet`
     padding: 1.875rem;

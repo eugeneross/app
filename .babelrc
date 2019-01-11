@@ -4,7 +4,12 @@
       "module-resolver", {
         "root": ["."],
         "alias": {
-          "styles": "./styles"
+          "styles": "./styles",
+          "@containers": "./containers",
+          "@components": "./components",
+          "@elements": "./elements",
+          "@blocks": "./blocks",
+          "@utils": "./utils",
         },
         "cwd": "babelrc"
     }],
