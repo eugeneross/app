@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { ThemeProvider } from 'styled-components';
 
 import stylesheet from '../styles/index.sass'
-import GlobalStyle from '../utils/globals'
+import { GlobalStyle, theme } from '@utils'
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -17,15 +17,19 @@ class MyApp extends App {
     return { pageProps }
   }
 
+  
+
   render() {
-    const { Component, pageProps } = this.props
+    
+    const { Component, pageProps} = this.props
+    console.log(ThemeProvider, theme, this.props, Component);
     return (
       <Container>
         <GlobalStyle />
         <Head>
           <title>Page Title</title>
         </Head>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={{ color: 'blue' }}>
           <Component {...pageProps} />
         </ThemeProvider>
       </Container>
