@@ -22,6 +22,7 @@ class MyApp extends App {
   render() {
     
     const { Component, pageProps} = this.props
+
     console.log(ThemeProvider, theme, this.props, Component);
     return (
       <Container>
@@ -29,7 +30,7 @@ class MyApp extends App {
         <Head>
           <title>Page Title</title>
         </Head>
-        <ThemeProvider theme={{ color: 'blue' }}>
+        <ThemeProvider theme={theme}>
           <Component {...pageProps} />
         </ThemeProvider>
       </Container>

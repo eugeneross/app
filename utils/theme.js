@@ -1,7 +1,4 @@
 
-
-import { keyframes } from 'styled-components'
-
 // Colors
 
 const primary = '#5C90E8'
@@ -10,14 +7,6 @@ const white = '#ffffff'
 const gray = '#EFEFEF'
 const text = '#444444'
 
-
-// Animations
-
-const flicker = keyframes`
-  0% { opacity: 0.3; }
-  50% { opacity: 1; }
-  100% { opacity: 0.3; }
-`
 
 // Transitions
 
@@ -46,15 +35,6 @@ export const theme = {
     gray,
     text,
   },
-  animations: {
-    flicker,
-  },
-  transitions,
-  placeholder: {
-    dark: 'rgba(0, 0, 0, 0.25)',
-    light: 'rgba(0, 0, 0, 0.25)',
-  },
-  input: {
-    border: '#b9bbbe',
-  },
+  
+  transitions
 }
