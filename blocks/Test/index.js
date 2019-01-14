@@ -8,6 +8,7 @@ const Test = styled.div`
   font-family: 'Play-Bold', 'Open Sans', serif;
   position: relative;
   color: red;
+  transition: ${p => p.theme.transitions.cubic2('.3s')};
 
   ${media.tablet`
     color: blue;
@@ -16,7 +17,7 @@ const Test = styled.div`
   p{
     color: blue;
     ${media.tablet`
-      color: green;
+      color: ${p => p.theme.colors.white};
     `}
   }
 

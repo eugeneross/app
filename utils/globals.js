@@ -25,17 +25,9 @@ ${font('Play-Bold', '600')}
 html{
   height: 100%;
   background-color: white;
-  ${'' /* font-size: 1rem; */}
   min-width: 18.75rem;
   overflow-x: hidden;
   overflow-y: scroll;
-  ${'' /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */}
-  ${'' /* -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-overflow-scrolling: touch; */}
-  ${'' /* text-rendering: optimizeLegibility; */}
-  ${'' /* text-size-adjust: 100%; */}
 }
 
 body{

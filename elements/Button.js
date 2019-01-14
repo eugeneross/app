@@ -1,5 +1,6 @@
 // Libraries
 import styled from 'styled-components'
+import { red } from 'ansi-colors';
 
 const Button = styled.a`
   position: relative;
@@ -9,17 +10,17 @@ const Button = styled.a`
   text-align: center;
   line-height: 1em;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 700; 
   letter-spacing: 1px;
   border-radius: .25rem;
-  background: ${props => props.white ? `${props.theme.colors.white}` : `${props.theme.colors.primary}` };
+  background: ${p => p.white ? `${p.theme.colors.white}` : `${p.theme.colors.primary}` };
   color: white;
   outline: none;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06);
-  transition: ${props.theme.transitions.cubic('.3s')};
+  transition: ${p => p.theme.transitions.cubic('.3s')};
 
     &:hover{
       text-decoration: none;
@@ -28,6 +29,7 @@ const Button = styled.a`
       transform: translateY(-1px);
       color: white;
     }
+
 
 `
 
