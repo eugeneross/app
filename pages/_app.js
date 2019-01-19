@@ -1,9 +1,8 @@
 import App, { Container } from 'next/app'
 import React from 'react'
 import Head from 'next/head'
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components'
 
-import stylesheet from '../styles/index.sass'
 import { GlobalStyle, theme } from '@utils'
 
 class MyApp extends App {
@@ -21,7 +20,8 @@ class MyApp extends App {
     
     const { Component, pageProps} = this.props
 
-    console.log(ThemeProvider, theme, this.props, Component);
+    // console.log(ThemeProvider, theme, this.props, Component);
+
     return (
       <Container>
         <GlobalStyle />

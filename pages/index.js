@@ -1,17 +1,11 @@
 // Libraries
 import React, { Component } from 'react'
 
-// import stylesheet from '../styles/index.sass'
+import { validatePhone } from 'input-validator-lib';
 
-import {
-  H1,
-  Container,
-  Main
-} from '../elements'
-
-import {
-  Test
-} from '../containers'
+// import {
+//   Text
+// } from '../elements'
 
 export default class Index extends Component {
   constructor(props) {
@@ -22,13 +16,14 @@ export default class Index extends Component {
     console.log('Index Component mounted.')
   }
   render() {
+    console.log(validatePhone)
     return (
 
-        <Main>
-          <Test/>
-        </Main>
+      <div>
+        check console for validator
+      </div>
 
     )
   }
-}
+} 
 

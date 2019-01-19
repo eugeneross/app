@@ -43,7 +43,8 @@ module.exports = withSASS({
 
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './')
+      '@': path.resolve(__dirname, './'),
+      // 'styled-components': path.resolve('./node_modules/styled-components')
     }
   }
 

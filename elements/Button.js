@@ -1,6 +1,5 @@
 // Libraries
 import styled from 'styled-components'
-import { red } from 'ansi-colors';
 
 const Button = styled.a`
   position: relative;
