@@ -1,7 +1,7 @@
 // Libraries
 import React, { Component } from 'react'
 
-import { validatePhone } from 'input-validator-lib';
+import { Button } from 'numie-lib';
 
 // import {
 //   Text
@@ -16,12 +16,10 @@ export default class Index extends Component {
     console.log('Index Component mounted.')
   }
   render() {
-    console.log(validatePhone)
+    console.log(Button)
     return (
 
-      <div>
-        check console for validator
-      </div>
+      <Button>Button</Button>
 
     )
   }
