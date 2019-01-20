@@ -1,11 +1,7 @@
 // Libraries
 import React, { Component } from 'react'
 
-import { Button } from 'numie-lib';
-
-// import {
-//   Text
-// } from '../elements'
+import { Button, Text } from '/Users/eugeneross/Sites/numie-lib'
 
 export default class Index extends Component {
   constructor(props) {
@@ -16,10 +12,12 @@ export default class Index extends Component {
     console.log('Index Component mounted.')
   }
   render() {
-    console.log(Button)
+  
     return (
-
+<>
       <Button>Button</Button>
+      <Text>green text</Text>
+     </>
 
     )
   }

@@ -1,7 +1,10 @@
 public
 out
 node_modules
-.DS_STore
+.DS_Store
 .next
 .vscode
 *.log
+.yalc
+yalc.lock
+yarn-error.log
