@@ -9,6 +9,7 @@
     "build-static": "next build && next export",
     "heroku-postbuild": "yarn build",
     "clean": "rm -rf node_modules && rm yarn.lock && rm -rf public out"
+    
   },
   "license": "MIT",
   "dependencies": {
@@ -22,7 +23,7 @@
     "glob": "7.1.3",
     "next": "7.0.2",
     "node-sass": "^4.11.0",
-    "numie-lib": "/Users/eugeneross/Sites/numie-lib",
+    "numie-lib":"file:/Users/eugeneross/sites/numie-lib",
     "postcss-css-variables": "^0.11.0",
     "postcss-easy-import": "^3.0.0",
     "raw-loader": "^1.0.0",

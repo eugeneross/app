@@ -1,7 +1,7 @@
 // Libraries
 import React, { Component } from 'react'
 
-import { Button, Text } from '/Users/eugeneross/Sites/numie-lib'
+import { Button, Text } from 'numie-lib'
 
 export default class Index extends Component {
   constructor(props) {
@@ -12,6 +12,8 @@ export default class Index extends Component {
     console.log('Index Component mounted.')
   }
   render() {
+
+    console.log(Button);
   
     return (
 <>

@@ -2,6 +2,7 @@ const path = require('path')
 const glob = require('glob')
 const withSASS = require('@zeit/next-sass')
 
+
 const commonsChunkConfig = (config, test = /\.css$/) => {
   config.plugins = config.plugins.map(plugin => {
     if (
@@ -38,6 +39,13 @@ module.exports = withSASS({
 
   webpack: config => {
     config = commonsChunkConfig(config, /\.(sass|scss|css)$/)
+
+    config.module.rules.forEach((rule) => {
+      if (rule.use.loader === 'next-babel-loader') {
+        rule.use.options.cwd = undefined;
+      }
+    });
+
     return config
   },
 
