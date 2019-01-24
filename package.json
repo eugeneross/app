@@ -8,8 +8,8 @@
     "start": "next start -p $PORT",
     "build-static": "next build && next export",
     "heroku-postbuild": "yarn build",
-    "clean": "rm -rf node_modules && rm yarn.lock && rm -rf public out"
-    
+    "clean": "rm -rf node_modules && rm yarn.lock && rm -rf public out",
+    "library": "node run"
   },
   "license": "MIT",
   "dependencies": {
@@ -23,7 +23,6 @@
     "glob": "7.1.3",
     "next": "7.0.2",
     "node-sass": "^4.11.0",
-    "numie-lib":"file:/Users/eugeneross/sites/numie-lib",
     "postcss-css-variables": "^0.11.0",
     "postcss-easy-import": "^3.0.0",
     "raw-loader": "^1.0.0",

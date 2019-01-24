@@ -16,6 +16,7 @@ module.exports = function (api) {
     ["module-resolver", {
       "root": ["."],
       "alias": {
+        "@lib": "../numie-lib/build",
         "styles": "./styles",
         "@containers": "./containers",
         "@components": "./components",

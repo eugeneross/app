@@ -38,6 +38,7 @@ module.exports = withSASS({
   },
 
   webpack: config => {
+
     config = commonsChunkConfig(config, /\.(sass|scss|css)$/)
 
     config.module.rules.forEach((rule) => {
@@ -46,14 +47,19 @@ module.exports = withSASS({
       }
     });
 
+
     return config
   },
+
 
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './'),
-      // 'styled-components': path.resolve('./node_modules/styled-components')
-    }
+      // 'styled-components': path.resolve(__dirname, 'node_modules/styled-components'),
+      // 'react': path.resolve(__dirname, 'node_modules/react')
+      modules: [path.resolve(__dirname, 'node_modules'), 'node_modules']
+    },
+    
   }
 
 })
