@@ -9,10 +9,10 @@
     "build-static": "next build && next export",
     "heroku-postbuild": "yarn build",
     "clean": "rm -rf node_modules && rm yarn.lock && rm -rf public out",
-    "library": "node run"
   },
   "license": "MIT",
   "dependencies": {
+    "@weco/next-plugin-transpile-modules": "^0.0.2",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "autoprefixer": "^9.4.5",

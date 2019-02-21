@@ -20,8 +20,6 @@ class MyApp extends App {
     
     const { Component, pageProps} = this.props
 
-    // console.log(ThemeProvider, theme, this.props, Component);
-
     return (
       <Container>
         <GlobalStyle />

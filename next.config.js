@@ -2,7 +2,6 @@ const path = require('path')
 const glob = require('glob')
 const withSASS = require('@zeit/next-sass')
 
-
 const commonsChunkConfig = (config, test = /\.css$/) => {
   config.plugins = config.plugins.map(plugin => {
     if (
@@ -23,6 +22,8 @@ const commonsChunkConfig = (config, test = /\.css$/) => {
 }
 
 module.exports = withSASS({
+  
+
   cssModules: true,
   cssLoaderOptions: {
     localIdentName: '[local]'
@@ -30,6 +31,7 @@ module.exports = withSASS({
 
   distDir: 'public',
 
+ 
   exportPathMap: function() {
     return {
       '/': { page: '/' },
@@ -47,10 +49,9 @@ module.exports = withSASS({
       }
     });
 
-
     return config
-  },
 
+  },
 
   resolve: {
     alias: {
@@ -63,3 +64,4 @@ module.exports = withSASS({
   }
 
 })
+

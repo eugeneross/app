@@ -1,9 +1,7 @@
 // Libraries
 import React, { Component } from 'react'
 
-import { Button, Text } from 'numie-lib'
-
-import { Button as Button2} from '@elements'
+import { Button } from '@elements'
 
 export default class Index extends Component {
   constructor(props) {
@@ -20,8 +18,7 @@ export default class Index extends Component {
     return (
 <>
       <Button>Button</Button>
-      <Button2>Hello</Button2>
-      <Text>green text</Text>
+      {/* <Text>green text</Text> */}
      </>
 
     )
