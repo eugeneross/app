@@ -1,11 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 
 import { theme } from './theme'
-import font from './typography'
+// import font from './typography'
 
 const GlobalStyle = createGlobalStyle`
 
-${font('Play-Bold', '600')}
+${'' /* ${font('Play-Bold', '600')} */}
 
 :root {
   -ms-overflow-style: -ms-autohiding-scrollbar;
