@@ -8,7 +8,7 @@
     "start": "next start -p $PORT",
     "build-static": "next build && next export",
     "heroku-postbuild": "yarn build",
-    "clean": "rm -rf node_modules && rm yarn.lock && rm -rf public out",
+    "clean": "rm -rf node_modules && rm yarn.lock && rm -rf public out"
   },
   "license": "MIT",
   "dependencies": {

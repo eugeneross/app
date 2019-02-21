@@ -22,8 +22,6 @@ const commonsChunkConfig = (config, test = /\.css$/) => {
 }
 
 module.exports = withSASS({
-  
-
   cssModules: true,
   cssLoaderOptions: {
     localIdentName: '[local]'
