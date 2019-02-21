@@ -2,7 +2,7 @@ import App, { Container } from 'next/app'
 import React from 'react'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
-
+import stylesheet from '../styles/index.sass'
 import { GlobalStyle, theme } from '@utils'
 
 class MyApp extends App {
