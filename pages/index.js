@@ -1,7 +1,7 @@
 // Libraries
 import React, { Component } from 'react'
 
-import { Button } from '@lib'
+import { Button } from 'numie-lib'
 
 export default class Index extends Component {
   constructor(props) {
