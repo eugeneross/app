@@ -22,9 +22,12 @@ module.exports = function (api) {
         "@elements": "./elements",
         "@blocks": "./blocks",
         "@utils": "./utils",
+        "@lib": "../numie-lib"
       },
       "cwd": "babelrc"
-    }]
+    }],
+    ["@babel/plugin-proposal-export-default-from"],
+    ["@babel/plugin-proposal-object-rest-spread"]
   ];
 
   return {
