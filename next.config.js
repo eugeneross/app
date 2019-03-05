@@ -47,19 +47,28 @@ module.exports = withSASS({
       }
     });
 
-    return config
+    const resolveConfig = config['resolve'] || {}
+    resolveConfig.alias = resolveConfig['alias'] || {}
+
+    const addAlias = p => resolveConfig.alias[p] = path.resolve(__dirname, 'node_modules', p)
+
+    addAlias('styled-components')
+
+    return {
+      ...config,
+      resolve: resolveConfig
+    } 
 
   },
 
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './'),
-      // 'styled-components': path.resolve(__dirname, 'node_modules/styled-components'),
-      // 'react': path.resolve(__dirname, 'node_modules/react')
-      modules: [path.resolve(__dirname, 'node_modules'), 'node_modules']
     },
     
   }
 
 })
+
+
 
