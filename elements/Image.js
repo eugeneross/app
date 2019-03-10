@@ -1,10 +1,13 @@
 // Libraries
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+import { media } from '../utils/breakpoints'
 
 const Image = styled.div`
   position: relative;
-  display: flex;
-  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 `
 
 export default Image

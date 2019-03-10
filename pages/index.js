@@ -1,7 +1,7 @@
 // Libraries
 import React, { Component } from 'react'
 
-import { Button } from '@lib'
+import { Accounts } from './components'
 
 export default class Index extends Component {
   constructor(props) {
@@ -16,10 +16,8 @@ export default class Index extends Component {
     console.log(Button);
   
     return (
-<>
-      <Button>Button</Button>
-      {/* <Text>green text</Text> */}
-     </>
+
+        <Accounts></Accounts>
 
     )
   }

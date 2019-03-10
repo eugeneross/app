@@ -1,14 +1,17 @@
+// Libraries
 import styled from 'styled-components'
 
-const Label = styled.label`
+import { media } from '../utils/breakpoints'
+import colors from '../utils/colors';
 
-  display: block;
-  font-size: 1rem;
-  color: ${p => p.theme.colors.primary};
+const Label = styled.label`
+  color: ${colors.blueGray};
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-variant: small-caps;
-  font-weight: bold;
-  
+  letter-spacing: .02rem;
+  margin-bottom: .5rem;
+  font-size: .875rem;
+  font-weight: 600;
+  display: block;
 `
+
 export default Label
